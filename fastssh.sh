@@ -25,10 +25,10 @@ command -v sshpass > /dev/null 2>&1 || { echo >&2 "I require sshpass. Run: apt-g
 scan() {
 banner
 dependencies
-read -e -p $'\e[1;37m[::] Put range ip part 1/4 \e[0m\e[91m(e.g.:192 255)  \e[0m\e[1;92m -> \e[0m' r1
-read -e -p $'\e[1;37m[::] Put range ip part 2/4 \e[0m\e[91m(e.g: 168 255)  \e[0m\e[1;92m -> \e[0m' r2
-read -e -p $'\e[1;37m[::] Put range ip part 3/4 \e[0m\e[91m(e.g.: 1 255)   \e[0m\e[1;92m -> \e[0m' r3
-read -e -p $'\e[1;37m[::] Put range ip part 4/4 \e[0m\e[91m(e.g.: 10 255)  \e[0m\e[1;92m -> \e[0m' r4
+read -p $'\e[1;37m[::] Put range ip part 1/4 \e[0m\e[91m(e.g.:192 255)  \e[0m\e[1;92m -> \e[0m' r1
+read -p $'\e[1;37m[::] Put range ip part 2/4 \e[0m\e[91m(e.g: 168 255)  \e[0m\e[1;92m -> \e[0m' r2
+read -p $'\e[1;37m[::] Put range ip part 3/4 \e[0m\e[91m(e.g.: 1 255)   \e[0m\e[1;92m -> \e[0m' r3
+read -p $'\e[1;37m[::] Put range ip part 4/4 \e[0m\e[91m(e.g.: 10 255)  \e[0m\e[1;92m -> \e[0m' r4
 default_port=22
 read -e -p $'\e[1;37m[::] Port to scan\e[0m \e[91m(Default 22):\e[0m ' port
 port="${port:-${default_port}}"
